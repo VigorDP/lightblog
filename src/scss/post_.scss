@@ -1,0 +1,23 @@
+.wrapper-post{
+	min-height:600px;
+	.head{
+		ul{
+			li{
+				margin:20px;
+			}
+			.content-post{
+				width:600px;
+				height:400px;
+				border:1px solid purple;
+				margin:0 auto;
+				text-align:left;
+				line-height:14px;
+			}
+			.textarea{
+				margin:20px 200px 20px 200px;
+				width:80%;
+			}
+		}
+		
+	}
+}

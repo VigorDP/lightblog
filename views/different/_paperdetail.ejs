@@ -1,0 +1,53 @@
+<div class="content-detail">
+   <h1>文章详情页</h1>
+   <% if(paper){%>
+	   	<div class="section">
+			<h2><%= paper.title%></h2>
+			<h3>
+			       <%if(user.name==paper.author){%>
+			       <a href="/edit?author=<%= paper.author%>&title=<%= paper.title%>">[编辑]</a>&nbsp;&nbsp;
+			       <a href="/delete?author=<%= paper.author%>&title=<%= paper.title%>">[删除]</a>
+			       <%}else{%>
+			       <a href="/reprint?title=<%=paper.title%>&author=<%=paper.author%>" title="">[转载此文]</a><%}%>
+			</h3>
+			<ul>
+				<li>作者：<a href='/user?name=<%=paper.author%>'><%=paper.author%></a></li>
+				<li>日期：<%= paper.time%></li>
+				<li>阅读：<%= paper.pv%></li>
+				<li>评论：<%= paper.comments.length%></li>
+			</ul>
+			<p><%- paper.content%></p>
+		</div>
+   <%} %>
+		<!-- 评论部分 -->
+	<div class="section_comment">
+		<%
+			var comments=paper.comments;
+			if(comments.length)
+				comments.forEach(function(comment,index){%>
+					<div class="item">
+						<ul>
+							<li>评论人：<%= comment.name%></li>
+							<li>评论时间：<%= comment.time%></li>
+						</ul>
+						<div class="content">
+							<%- comment.content%>
+						</div>
+					</div>
+				<%})%>
+	</div>
+   	<input type="button" class="button" name="" value="添加评论">
+   	<div class="section_makecomment">
+			<form action="/comment" method="post" accept-charset="utf-8" >
+					<ul>
+						<li>评论人：<input type="text" name="name" value='<%=user.name%>'></li>
+						<li>文章标题：<input type="text" name="title" value="<%= paper.title%>"></li>
+						<li>文章作者：<input type="text" name="author" value="<%= paper.author%>"></li>
+						<li>评论时间：<input type="text" value='2015'></li>
+						<li class="textarea"><textarea name="content" rows="8" cols="100" class="content-post"></textarea></li>
+					</ul>
+					<input type="submit" class="button" name="" value="提交评论">
+					
+			</form>
+	</div>
+</div>

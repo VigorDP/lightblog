@@ -1,0 +1,375 @@
+@charset "UTF-8";
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+fieldset, lengend, button, input, textarea,
+th, td {
+  /* table elements 表格元素 */
+  margin: 0;
+  padding: 0; }
+
+/* 设置默认字体 */
+body,
+button, input, select, textarea {
+  /* for ie */
+  /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+  font: 14px/1 '微软雅黑';
+  /* 用 ascii 字符表示，使得在任何编码下都无问题 */ }
+
+h1 {
+  font-size: 20px;
+  /* 18px / 12px = 1.5 */ }
+
+h2 {
+  font-size: 16px; }
+
+h3 {
+  font-size: 14px; }
+
+h4, h5, h6 {
+  font-size: 100%; }
+
+address, cite, dfn, em, var {
+  font-style: normal; }
+
+/* 将斜体扶正 */
+code, kbd, pre, samp, tt {
+  font-family: "Courier New", Courier, monospace; }
+
+/* 统一等宽字体 */
+small {
+  font-size: 12px; }
+
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+/* 重置列表元素 */
+ul, ol {
+  list-style: none; }
+
+/* 重置文本格式元素 */
+a {
+  text-decoration: none; }
+
+abbr[title], acronym[title] {
+  /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+q:before, q:after {
+  content: ''; }
+
+/* 重置表单元素 */
+legend {
+  color: #000; }
+
+/* for ie6 */
+fieldset, img {
+  border: none; }
+
+/* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+  font-size: 100%;
+  /* 使得表单元素在 ie 下能继承字体大小 */ }
+
+/* 重置表格元素 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* 重置 hr */
+hr {
+  border: none;
+  height: 1px; }
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html {
+  overflow-y: scroll; }
+
+header, footer {
+  height: 80px;
+  line-height: 80px;
+  min-width: 1200px; }
+
+section {
+  min-height: 600px;
+  min-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  background-color: lightblue;
+  overflow: hidden; }
+
+footer {
+  text-align: center;
+  background: #0458B0; }
+  footer .state {
+    display: inline-block;
+    font-size: 20px;
+    color: red;
+    text-align: left;
+    margin-left: 200px; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both; }
+
+.button {
+  background: lightgreen;
+  width: 260px;
+  height: 40px;
+  margin: 20px;
+  border: none;
+  border-radius: 6px;
+  letter-spacing: 20px; }
+  .button:hover {
+    cursor: pointer;
+    background: lightblue; }
+
+a {
+  color: green; }
+  a:hover {
+    color: lime; }
+
+.wrapper_all {
+  background: url(../imgs/bg.jpg);
+  background-size: cover;
+  height: 80px; }
+
+.header {
+  width: 90%;
+  margin: 0 auto; }
+  .header .text {
+    float: left;
+    width: 20%;
+    height: 80px; }
+  .header .state {
+    font-size: 18px;
+    color: red;
+    display: inline-block;
+    width: 240px;
+    overflow: hidden; }
+  .header .navbar {
+    float: right; }
+    .header .navbar ul {
+      height: 80px; }
+      .header .navbar ul li {
+        display: inline-block;
+        margin-left: 10px;
+        padding: 0 20px;
+        letter-spacing: 4px;
+        font-weight: bold; }
+        .header .navbar ul li:hover {
+          background: lightgreen; }
+          .header .navbar ul li:hover a {
+            color: purple; }
+        .header .navbar ul li a {
+          color: white; }
+      .header .navbar ul .active {
+        background: lightgreen; }
+        .header .navbar ul .active a {
+          color: purple; }
+
+.wrapper-index {
+  min-height: 600px; }
+
+.left, .mid, .right {
+  background: lightblue;
+  min-height: 600px;
+  float: left; }
+
+.left {
+  width: 15%; }
+
+.mid {
+  width: 70%; }
+
+.right {
+  width: 15%; }
+
+.resume, .read-sort {
+  width: 90%;
+  margin: 15px auto;
+  border-radius: 10px;
+  background: #DDE64A; }
+  .resume .head, .read-sort .head {
+    padding: 4px;
+    border-bottom: 1px solid black; }
+  .resume .content ul, .read-sort .content ul {
+    border-top: 1px dashed #ccc;
+    padding-left: 15px; }
+    .resume .content ul li, .read-sort .content ul li {
+      margin: 7px auto;
+      letter-spacing: 2px;
+      text-align: left; }
+
+.resume {
+  height: 308px; }
+  .resume .content img {
+    margin: 10px 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px; }
+
+.read-sort {
+  height: 248px; }
+
+@charset "UTF-8";
+section .content-mid {
+  min-height: 560px;
+  margin: 15px;
+  background-color: #b5b4b5;
+  padding-top: 10px;
+  border-radius: 10px; }
+  section .content-mid .section {
+    height: 168px;
+    border: 1px solid purple;
+    width: 90%;
+    margin: 0 auto 10px; }
+    section .content-mid .section .row {
+      border-bottom: 1px dashed #DDC3E9;
+      line-height: 30px; }
+      section .content-mid .section .row h2 {
+        font-size: 20px;
+        letter-spacing: 4px;
+        text-align: left;
+        margin: 0 0 0 20px; }
+    section .content-mid .section .row_1 {
+      height: 100px; }
+      section .content-mid .section .row_1 p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #5A5050;
+        text-align: left;
+        margin-top: 10px;
+        text-indent: 2em;
+        font: 16px/1.6 "微软雅黑"; }
+    section .content-mid .section ul {
+      margin-bottom: 10px;
+      text-align: right; }
+      section .content-mid .section ul li {
+        display: inline-block;
+        margin-right: 30px;
+        color: red; }
+  section .content-mid .devide ul {
+    display: inline-block; }
+    section .content-mid .devide ul li {
+      display: inline-block;
+      margin-right: 20px; }
+
+.content-detail {
+  width: 80%;
+  margin: 10px auto;
+  min-height: 1000px;
+  background-color: #BDA8C3;
+  border: 1px solid purple;
+  border-radius: 20px; }
+  .content-detail h1 {
+    padding: 10px;
+    border-bottom: 1px dashed #ccc; }
+  .content-detail .section {
+    min-height: 800px;
+    border: 1px solid red;
+    margin: 30px;
+    padding: 10px;
+    background-color: #ccc; }
+    .content-detail .section h2 {
+      margin: 30px; }
+    .content-detail .section h3 {
+      margin: 20px; }
+    .content-detail .section p {
+      text-align: left;
+      font-size: 16px;
+      margin: 10px;
+      text-indent: 2em;
+      line-height: 20px; }
+    .content-detail .section ul li {
+      display: inline-block;
+      margin-left: 20px; }
+  .content-detail .section_comment {
+    min-height: 100px;
+    border: 1px solid purple;
+    margin: 30px;
+    padding: 10px;
+    background-color: #ccc; }
+    .content-detail .section_comment .item {
+      min-height: 80px;
+      background-color: #54A056;
+      margin-top: 10px; }
+      .content-detail .section_comment .item ul {
+        border-bottom: 1px dashed #ccc; }
+        .content-detail .section_comment .item ul li {
+          display: inline-block;
+          margin: 14px; }
+      .content-detail .section_comment .item .content {
+        overflow: hidden;
+        text-align: left;
+        font-size: 16px;
+        margin: 4px;
+        text-indent: 2em;
+        line-height: 20px; }
+  .content-detail .section_makecomment {
+    border: 1px solid red;
+    background-color: #ccc; }
+    .content-detail .section_makecomment ul li {
+      display: inline-block;
+      margin: 14px; }
+    .content-detail .section_makecomment .content-post {
+      color: green;
+      margin: 0 0 0 -16px;
+      padding: 10px; }
+
+.wrapper-post {
+  min-height: 600px; }
+  .wrapper-post .head ul li {
+    margin: 20px; }
+  .wrapper-post .head ul .content-post {
+    width: 600px;
+    height: 400px;
+    border: 1px solid purple;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 14px; }
+  .wrapper-post .head ul .textarea {
+    margin: 20px 200px 20px 200px;
+    width: 80%; }
+
+.signin_bg {
+  background: url(../imgs/signin_bg.jpg); }
+
+.signup_bg {
+  background: url(../imgs/signup_bg.jpg); }
+
+.signin_bg, .signup_bg {
+  min-height: 600px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.wrapper-signin {
+  position: absolute;
+  top: 100px;
+  left: 800px;
+  width: 400px;
+  height: 400px;
+  border-radius: 40px;
+  background: #1c9; }
+  .wrapper-signin h1 {
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 2px solid green;
+    margin-bottom: 60px; }
+  .wrapper-signin ul li {
+    font-size: 18px;
+    margin: 30px;
+    letter-spacing: 4px; }
+    .wrapper-signin ul li i {
+      display: inline-block;
+      margin: 0 4px; }
+  .wrapper-signin ul .identity {
+    margin-left: -34px; }

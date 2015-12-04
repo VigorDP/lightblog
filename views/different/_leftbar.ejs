@@ -1,0 +1,38 @@
+<div class="resume">
+	<div class="head">
+		<h2>个人资料</h2>
+	</div>
+	<div class="content">
+		<%var url=null;
+		if(user)
+			url=user.head;
+		else
+			url='imgs/logo.jpg';
+		%>
+		<img src="<%=url%>" alt="avatar图像">
+		<ul>
+			<%if(user){%>
+			<li>昵称：<a href='/user?name=<%=user.name%>'><%=user.name%></a></li>
+				<li>年龄：<%=user.age%></li>
+				<li>访问：</li>
+			<%}else{%>
+			<li>昵称：未登录</li>
+			<li>年龄：未登录</li>
+			<li>访问：</li>
+			<%}%>
+		</ul>
+	</div>
+</div>
+<div class="read-sort">
+	<div class="head">
+		<h2>阅读排行</h2>
+	</div>
+	<div class="content">
+		<ul>
+			<li>1、昵称：</li>
+			<li>2、性别：</li>
+			<li>3、年龄：</li>
+			<li>4、访问：</li>
+		</ul>
+	</div>
+</div>

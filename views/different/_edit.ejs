@@ -1,0 +1,12 @@
+<form method="post" accept-charset="utf-8">
+	<div class="wrapper-post">
+		<div class="head">
+			<ul>
+				<li>文章标题：<input type="text" name='title' value='<%= paper.title%>' >
+				</li>
+				<li  class="textarea"><textarea name="content" rows="20" cols="100" class="content-post"><%=paper.content%></textarea></li>
+				<li><input type="submit" class="button" value="保存更改"></li>
+			</ul>
+		</div>
+	</div>
+</form>

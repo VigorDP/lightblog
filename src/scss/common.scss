@@ -1,0 +1,35 @@
+.clearfix{
+	*zoom:1;
+	&:after{
+		content:""; 
+		display:block; //必须有
+		height:0; 
+		visibility:hidden; 
+		clear:both; 
+	}
+}
+.button{
+	background: lightgreen;
+	width:260px;
+	height:40px;
+	margin:20px;
+	border:none;
+	border-radius:6px;
+	letter-spacing:20px;
+	&:hover{
+		cursor:pointer;
+		background: lightblue;
+	}
+}
+a{
+	color:green;
+	// &:visited{
+	// 	color:green;
+	// }
+	&:hover {
+		color:lime;
+	}
+	// &:active {
+	// 	color:lime;
+	// }
+}

@@ -1,0 +1,26 @@
+header,footer{
+	height: 80px;
+	line-height: 80px;
+	min-width:1200px;
+}
+section{
+	min-height: 600px;
+	min-width:1200px;
+	margin: 0 auto;
+	text-align: center;
+	position:relative;
+	background-color: lightblue;
+	overflow:hidden;
+}
+footer{
+	text-align:center;
+	background:#0458B0;
+	.state{
+		display: inline-block;
+		font-size:20px;
+		color:red;
+		text-align:left;
+		margin-left:200px;
+	}
+}
+

@@ -1,0 +1,37 @@
+.resume,.read-sort{
+	width:90%;
+	margin:15px auto;
+	border-radius:10px;
+	background:#DDE64A;
+	.head{
+		padding:4px;
+		border-bottom:1px solid black;
+	}
+	.content{
+		ul{
+			border-top:1px dashed #ccc;
+			padding-left:15px;
+			li{
+				margin:7px auto;
+				letter-spacing:2px;
+				// color:#ccc;
+				text-align:left;
+			}
+		}
+	}
+}
+.resume{
+	// border:1px solid red;
+	height:308px;
+	.content{
+		img{
+			margin:10px 0;
+			width:120px;
+			height:120px;
+			border-radius:20px;
+		}
+	}
+}
+.read-sort{
+	height:248px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>这是<%= title %></title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
+	<script src="js/main.min.js"></script>
+	<script charset="utf-8" src="js/kindEditor/kindeditor-min.js"></script>
+	<script charset="utf-8" src="js/kindEditor/lang/zh_CN.js"></script>
+	<script>
+		var editor;
+		KindEditor.ready(function(K) {
+		  editor = K.create('textarea', {
+		  allowImageUpload : false,
+		 items : [
+		    'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
+		    'underline', 'removeformat', '|','emoticons', 'image', 'link']
+		  });
+		});
+	</script>
+</head>
+<body>
+<div class="wrapper_all">
+	<header>
+		<div class="wrapper">
+			<div class="header clearfix">
+				<div class="text">
+					<h1>简易博客系统</h1>
+				</div>
+				<% if (success) { %>
+				   <span class='state'><%= success %></span>
+				<% } %>
+				<% if (error) { %>
+				  <span class='state'><%= error %></span>
+				<% } %>
+				<div class="navbar">
+					<ul>
+						<li class="active"><a href="/" title="">主页</a></li>
+						<!-- 用户登录后才显示发表和上传菜单 -->
+						<%if(user){%><li><a href="/post" title="">发表</a></li>
+						<li><a href="/upload" title="">上传</a></li>
+						<%}%>
+						<!-- 用户未登录才显示登录和注册菜单 -->
+						<%if(!user){%>
+						<li><a href="/signin" title="">登录</a></li>
+						<li><a href="/signup" title="">注册</a></li>
+						<%}%>
+						<li><a href="/logout" title="">退出</a></li>
+						<li><a href="/manage" title="">后台</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header><!-- /header -->
+	<section>

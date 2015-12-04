@@ -1,0 +1,50 @@
+.wrapper_all{
+	background:url(../imgs/bg.jpg);
+	background-size: cover;
+	height:80px;
+}
+.header{
+	width:90%;
+	margin:0 auto;
+	.text{
+		float:left;
+		width: 20%;
+		height:80px;
+	}
+	.state{
+		font-size:18px;
+		color:red;
+		display:inline-block;
+		width:240px;
+		overflow:hidden;
+	}
+	.navbar{
+		float:right;
+		ul{
+			height:80px;
+			li{
+				display: inline-block;
+				margin-left:10px;
+				padding:0 20px;
+				letter-spacing:4px;
+				font-weight:bold;
+				&:hover{
+					background:lightgreen;
+					a{
+						color:purple;
+					}
+				}
+				a{
+					color:white;
+				}
+			}
+			.active{
+				background:lightgreen;
+				a{
+					color:purple;
+				}
+			}
+		}
+	}
+}
+
