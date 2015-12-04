@@ -1,19 +1,19 @@
-# lightblog
+# lightblog(LB)
 Node+Express+MongoDB+EJS实现的轻博客系统
 #访问地址
 https://mylightblog.herokuapp.com
 ##项目介绍：
 ###前端技术
 `````
-1 NJBlog前台采用AngularJs进行开发。
-2 NJBlog目前所有前端JS代码全部采用模块化编写，使用Requirejs驱动（将来可能考虑采用国产Seajs）。
-3 NJBlog使用mocha+chai来编写js单元测试。
-4 NJBlog使用强大的gulp对项目进行构建工作。
-5 NJBlog全部代码托管在GitHub上。
+1 LB前台采用EJS模板进行开发(将来打算改用Angular)。
+2 LB目前所有前端JS代码全部采用模块化编写，使用Requirejs驱动（将来可能考虑采用国产Seajs）。
+3 LB使用mocha+chai来编写js单元测试。
+4 LB使用强大的gulp对项目进行构建工作。
+5 LB全部代码托管在GitHub上。
 `````
 ###后端技术
 `````
-1 NJBlog后台采用Nodejs+express来提供Restful API.
+1 LB后台采用Nodejs+express来提供Restful API.
 2 数据库采用 Mongodb，通过Mongoose驱动。
 3 服务器部署在heroku，数据库使用mongolab。
 `````
