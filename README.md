@@ -3,13 +3,26 @@ Node+Express+MongoDB+EJS实现的轻博客系统
 #访问地址
 https://mylightblog.herokuapp.com
 ##项目介绍：
+###前端技术
+`````
+1 NJBlog前台采用AngularJs进行开发。
+2 NJBlog目前所有前端JS代码全部采用模块化编写，使用Requirejs驱动（将来可能考虑采用国产Seajs）。
+3 NJBlog使用mocha+chai来编写js单元测试。
+4 NJBlog使用强大的gulp对项目进行构建工作。
+5 NJBlog全部代码托管在GitHub上。
+`````
+###后端技术
 `````
 1 NJBlog后台采用Nodejs+express来提供Restful API.
 2 数据库采用 Mongodb，通过Mongoose驱动。
-3 NJBlog前台采用AngularJs进行开发。
-4 NJBlog目前所有前端JS代码全部采用模块化编写，使用Requirejs驱动（将来可能考虑采用国产Seajs）。
-5 NJBlog使用mocha+jasmine来编写js单元测试。
-6 NJBlog使用强大的gulp对项目进行构建工作。
-7 NJBlog全部代码托管在GitHub上，使用牛逼的travis-ci进行持续集成（可用来跑单元测试）。
-8 项目的demo由heroku和mongolab提供动力。
+3 服务器部署在heroku，数据库使用mongolab。
 `````
+#功能介绍
+```
+1 实现普通登录和第三方登录
+2 实现注册时需要邮箱激活
+3 已登录用户可以发表文章、修改文章、转载文章，还可评论文章
+4 未登录用户试图浏览文章时会被强制登录
+5 已登录用户不能访问注册页和登录页，未登录用户不能访问发表文章页
+6 ...
+```
